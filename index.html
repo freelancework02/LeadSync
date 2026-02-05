@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadSync 360 - System Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .browser-window {
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            background: #fff;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .browser-window:hover {
+            transform: translateY(-5px);
+        }
+
+        .window-header {
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red {
+            background: #ef4444;
+        }
+
+        .dot-yellow {
+            background: #f59e0b;
+        }
+
+        .dot-green {
+            background: #22c55e;
+        }
+
+        .address-bar {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            height: 24px;
+            flex: 1;
+            margin-left: 12px;
+            font-size: 11px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            font-family: monospace;
+        }
+
+        .step-number {
+            font-size: 5rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            line-height: 1;
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Hero Header -->
+    <header class="bg-white border-b border-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-50/50 skew-y-3 origin-top-left transform -translate-y-1/2"></div>
+        <div class="max-w-6xl mx-auto px-6 pt-24 pb-20 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+                System Architecture & Workflow
+            </span>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+                LeadSync <span class="text-blue-600">360</span> Documentation
+            </h1>
+            <p class="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
+                A complete visual walkthrough of the Lead Management Solution. This document outlines every core module,
+                from secure authentication to multi-channel distribution.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-24 space-y-32">
+
+        <!-- 01: Login -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-1 lg:order-1 relative">
+                <span class="step-number">01</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Admin Authentication</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    The secure entry point to the LeadSync 360 ecosystem. The modernized login interface features:
+                </p>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <strong>JWT-Based Security:</strong> Encrypted token management.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <strong>Responsive Design:</strong> Optimized for all device sizes.
+                    </li>
+                </ul>
+            </div>
+            <div class="order-2 lg:order-2">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/login</div>
+                    </div>
+                    <img src="./Images/loginpage.png" alt="Login Interface" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 02: Dashboard -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/dashboard</div>
+                    </div>
+                    <img src="./Images/composeemail.png" alt="Dashboard Interface" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <span class="step-number text-slate-100/50 right-0 left-auto">02</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Campaign Composer</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    The central hub for email marketing. This interface allows users to craft rich, HTML-responsive
+                    emails using a drag-and-drop methodology.
+                </p>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <strong>Live Preview:</strong> Real-time rendering of email templates.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <strong>Asset Manager:</strong> Integrated upload for logos and heroes.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 03: Lead Management -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-1 lg:order-1 relative">
+                <span class="step-number">03</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Lead Database</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    A comprehensive table view of all contacts. Filter, search, and manage leads with granular control.
+                    The interface highlights subscriber status and key metadata.
+                </p>
+            </div>
+            <div class="order-2 lg:order-2">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/leads</div>
+                    </div>
+                    <img src="./Images/Leads.png" alt="Lead List" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 04: Bulk Upload -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/upload</div>
+                    </div>
+                    <img src="./Images/Uploads Leads.png" alt="Bulk Upload" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <span class="step-number text-slate-100/50 right-0 left-auto">04</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Bulk Import</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Accelerate growth with CSV/Excel imports. The system includes built-in duplicate detection and error
+                    handling to ensure database integrity during mass uploads.
+                </p>
+            </div>
+        </section>
+
+        <!-- 05: Template Gallery -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-1 lg:order-1 relative">
+                <span class="step-number">05</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Template Gallery</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    A visual browser for all email designs. Marketers can quickly preview "Corporate Blue",
+                    "Newsletter", and specialized templates before launching a campaign.
+                </p>
+            </div>
+            <div class="order-2 lg:order-2">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/templates</div>
+                    </div>
+                    <img src="./Images/Preview Template.png" alt="Template Gallery" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 06: Social Media -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/social</div>
+                    </div>
+                    <img src="./Images/Social upload.png" alt="Social Media" class="w-full h-auto">
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <img src="./Images/screeninsta.png" class="rounded-lg shadow-md border border-slate-200"
+                        alt="Instagram">
+                    <img src="./Images/screenfacebook.png" class="rounded-lg shadow-md border border-slate-200"
+                        alt="Facebook">
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <span class="step-number text-slate-100/50 right-0 left-auto">06</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Social Suite</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Integrated publishing for Facebook and Instagram. Select content types (Reels, Posts, Carousels) and
+                    push directly to your feeds from the dashboard.
+                </p>
+            </div>
+        </section>
+
+        <!-- 07: Unsubscribe -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-1 lg:order-1 relative">
+                <span class="step-number">07</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Compliance Manager</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Automated handling of unsubscribed users. This list is automatically cross-referenced against all
+                    outgoing campaigns to ensure rigorous legal compliance.
+                </p>
+            </div>
+            <div class="order-2 lg:order-2">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/unsubscribes</div>
+                    </div>
+                    <img src="./Images/Unsubscribe leads.png" alt="Unsubscribe List" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 08: User Admin -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="browser-window">
+                    <div class="window-header">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                        <div class="address-bar">leadsync360.com/users</div>
+                    </div>
+                    <img src="./Images/Add User.png" alt="User Admin" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <span class="step-number text-slate-100/50 right-0 left-auto">08</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">User Administration</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mb-6"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Role-based access control. Admins can provision new accounts, securing platform access and
+                    delegating responsibilities efficiently.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-white text-2xl font-bold mb-4">LeadSync 360</h3>
+            <p class="mb-8">Empowering your marketing workflow.</p>
+            <div class="border-t border-slate-800 pt-8 text-sm">
+                &copy; 2026 LeadSync 360 Inc. Restricted Internal Documentation.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
